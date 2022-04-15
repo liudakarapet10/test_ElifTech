@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        h1{
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p{
+           font-size: 24px;  
+           margin-bottom: 0; 
+        }
+
+        table, th, td {
+          border:1px solid black;
+          text-align: center;
+          height: 20px;
+        }
+
+        div {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+          width: 30%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+
+        form{
+            width: 100%;
+            height: auto;
+        }
+
+        input[type=text], .btn {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        .btn:hover{
+            background-color: rgba(0, 0, 255, 0.39);
+        }
+
+        button{
+           width: 33%;   
+        }
+
+        button:hover{
+            background-color: rgba(0, 0, 255, 0.39);
+        }
+        </style>
+</head>
+<body>
+    <h1>Banks management page</h1>
+    <p>Fill out the form</p>
+    <div>
+        <form name="form" id="form">
+            <label for="bankName">Bank name</label>
+            <input type="text" id="bankName" name="bankName" placeholder="Bank name..">
+
+            <label for="interestRate">Interest rate</label>
+            <input type="text" id="interestRate" name="interestRate" placeholder="Interest rate..">
+
+            <label for="maximumLoan">Maximum loan</label>
+            <input type="text" id="maximumLoan" name="maximumLoan" placeholder="Maximum loan..">
+
+            <label for="minimumDownPayment">Minimum down payment</label>
+            <input type="text" id="minimumDownPayment" name="minimumDownPayment" placeholder="Minimum down payment..">
+
+            <label for="loanTerm">Loan term</label>
+            <input type="text" id="loanTerm" name="loanTerm" placeholder="Loan term..">
+
+            <button class="btn" type="sumbit">Add to table</button>
+        </form>
+    </div>
+
+    <table id="table" style="width:100%">
+        <tr>
+           <th>Bank name</th>
+           <th>Interest rate</th>
+           <th>Maximum loan</th>
+           <th>Minimum down payment</th>
+           <th>Loan term</th>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

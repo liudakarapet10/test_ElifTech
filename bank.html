@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <style>
+       h1{
+           font-size: 36px;
+           text-align: center;
+       }  
+
+       div{
+           border-bottom: 1px solid black;
+           margin: 10px;
+       }
+
+       form{
+           width: 15%;
+           height: auto;
+           margin: 5px;
+       }
+       
+       input[type=number], .btn {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        button{
+           width: 33%;   
+        }
+
+        button:hover{
+            background-color: rgba(0, 0, 255, 0.39);
+        }
+
+        .outputAmount{
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Information about bank</h1>
+    <div>
+        <h3>Bank Name:</h3>
+        <p class="name"></p>
+        <h3>interest Rate:</h3>
+        <p class="rate"></p>
+        <h3>Maximum Loan:</h3>
+        <p class="loan"></p>
+        <h3>Minimum Down Payment:</h3>
+        <p class="payment"></p>
+        <h3>Loan Term:</h3>
+        <p class="term"></p>
+    </div>
+    <form>
+        <label for="inputAmount">Input Amount</label><br>
+        <input type="number" id="inputAmount" name="inputAmount"><br>
+        <button class="count">Count</button>
+      </form>
+      <p>Output Amount</p>
+      <p class="outputAmount"></p>
+    <script src="bank.js"></script>
+</body>
+</html>
