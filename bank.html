@@ -21,6 +21,10 @@
            height: auto;
            margin: 5px;
        }
+
+       h3, p {
+           margin: 0;
+       }
        
        input[type=number], .btn {
           width: 100%;
@@ -40,9 +44,18 @@
             background-color: rgba(0, 0, 255, 0.39);
         }
 
-        .outputAmount{
-            
+        .conteinerManthlyPayment{
+            border-bottom: none;
         }
+
+        .countBtn{
+            width: 5%;
+        }
+
+        .titleMonthyPayment{
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -59,13 +72,15 @@
         <h3>Loan Term:</h3>
         <p class="term"></p>
     </div>
-    <form>
-        <label for="inputAmount">Input Amount</label><br>
-        <input type="number" id="inputAmount" name="inputAmount"><br>
-        <button class="count">Count</button>
+    <form class="bankForm">
+        <label for="amountBororwed">Amount Borrowed</label><br>
+        <input type="number" id="amountBororwed" name="amountBororwed"><br>
+        <label for="numberOfMonths">Number of months of payment</label><br>
+        <input type="number" id="numberOfMonths" name="numberOfMonths"><br>
+        <button class="save">Save</button><br>
       </form>
-      <p>Output Amount</p>
-      <p class="outputAmount"></p>
+      <div class="conteinerManthlyPayment">
+      </div>
     <script src="bank.js"></script>
 </body>
 </html>

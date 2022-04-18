@@ -1,3 +1,6 @@
+When you want to open file in browser, you must open terminal and write life-server, then index.html will open is browser!
+
+
 Create bank:
 1)Open index.html in browser
 2)Fill out the form
@@ -15,4 +18,8 @@ Open Bank:
 1)Click button 'Open bank'
 2)Then new page opens
 3)In this page shows information about bank
-Note!!! If you want to count your sum with percent, you must fill out in input.(Sorry, my function outputSum doest`n work).# ElifTech_task
+
+Calculate the monthly payment:
+1)Fill out inputs
+2)Click button "Save"
+3)Click button "Count"

@@ -1,6 +1,8 @@
 const form = document.querySelector('#form');
 const table = document.querySelector("#table");
 const localStorage = window.localStorage;
+let openBtnIndex = 0 ;
+let arrayBank = [];
 
 
 
@@ -16,10 +18,12 @@ function addBank(e){
     const loanTerm = document.forms["form"]["loanTerm"].value;
 
 
+
     if( bankName == null || bankName == "" , interestRate == null || interestRate == "", maximumLoan == null || maximumLoan == "" , minimumDownPayment == null || minimumDownPayment == "", loanTerm == null || loanTerm == ""){
         alert('Fill out the form')
         return false;
      }
+
 
         table.innerHTML += `
           <tr>
@@ -28,20 +32,25 @@ function addBank(e){
           <td class='mLoan'>${maximumLoan}</td>
           <td class='mPayment'>${minimumDownPayment}</td>
           <td class='lTerm'>${loanTerm}</td>
-          <td><button class='delateBtn'>Delate</button><button class="editBtn">Edit</button><button class='openBtn' onclick="window.open('file:///home/liuda/Documents/Task%20ElifTech/bank.html'); return false">Open Bank</Button></td> 
+          <td><button class='delateBtn'>Delate</button><button class="editBtn">Edit</button><button class='openBtn' date-row='${++openBtnIndex}' onclick="window.open('/bank.html'); return false">Open Bank</Button></td> 
           </tr>
         `; 
 
-        localStorage.setItem('bankName', bankName);
-        localStorage.setItem('interestRate', interestRate);
-        localStorage.setItem('maximumLoan', maximumLoan);
-        localStorage.setItem('minimumDownPayment', minimumDownPayment);
-        localStorage.setItem('loanTerm', loanTerm);
-        console.log(localStorage);
+        let bank = {
+            number: openBtnIndex,
+            bankName: bankName,
+            interestRate: interestRate,
+            maximumLoan: maximumLoan,
+            minimumDownPayment: minimumDownPayment,
+            loanTerm: loanTerm
+        }
 
-        form.reset();  
+        arrayBank.push(bank);
 
-         
+       window.localStorage.setItem('arrayBank', JSON.stringify(arrayBank))
+       console.log(arrayBank)
+       
+        form.reset();   
   }
 
   table.addEventListener('click', delateBank)
@@ -83,6 +92,7 @@ function addBank(e){
     form.reset();
     
   }
+
 
 
 
